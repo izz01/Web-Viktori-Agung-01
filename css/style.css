@@ -30,8 +30,22 @@ header ul li {
   color: white;
   font-size: 9pt;
 }
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+a:hover {
+  font-weight: bold;
+}
+li a {
+  color: white;
+}
+.nav-header li a {
+  color: white !important;
+}
 topbar {
   width: 40px;
+  font-size: 9pt;
 }
 topbar img {
   width: 10%;
@@ -135,6 +149,7 @@ topbar .row {
   align-items: center;
 }
 .jdl-bg1 {
+  margin-top: 50px;
   z-index: 2;
   color: white;
   font-family: "Work Sans", sans-serif;
@@ -164,7 +179,7 @@ topbar .row {
   text-shadow: -2px 1px 2px #8484e3;
 }
 .btn-bg:hover {
-  background: rgb(33, 31, 102);
+  background: rgb(80, 56, 5);
   background: linear-gradient(
     4deg,
     rgba(33, 31, 102, 1) 0%,
@@ -196,8 +211,8 @@ topbar .row {
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
-  font-size: 9px;
-  padding: 5px 16px;
+  font-size: 14px;
+  padding: 5px 30px;
   text-decoration: none;
   text-shadow: 0px -1px 0px #4a3131;
 }
@@ -370,9 +385,13 @@ h1::after {
 .container .row .col p {
   padding-left: 2rem;
 }
+.list-menu {
+  display: none;
+  margin-right: 20px;
+}
 
 @media screen and (max-width: 618px) {
-  header ul li {
+  header ul {
     display: none;
   }
   .container .row .col p {
@@ -381,21 +400,52 @@ h1::after {
   .col ul {
     padding: 0;
   }
+  .ini {
+    padding-right: 100px;
+  }
+  .list-menu {
+    display: block;
+  }
 }
 @media screen and (max-width: 948px) {
-  .mapouter .ps-5 {
-    padding-left: 0rem !important;
-  }
   .kontakme {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    padding-left: 20px;
+  }
+  .container .row {
+    display: block;
+  }
+  .container .row .col {
+    margin-top: 30px;
+  }
+  .parallax-window img {
+    width: 500px;
+  }
+  .jdl-bg {
+    text-align: center;
+    font-size: 40px;
+    top: 30%;
   }
 }
 
 @media screen and (max-width: 800px) {
   .kontakme {
     justify-content: center;
-    padding: 90px 90px;
+  }
+  #kolom ul {
+    display: block;
+    text-align: center;
+    margin: 40px;
+  }
+}
+@media screen and (max-width: 491px) {
+  .col .logo-footer {
+    max-width: -webkit-fill-available;
+    margin-bottom: 10px;
+  }
+  .mapouter .ps-5 {
+    padding-left: 0rem !important;
   }
 }

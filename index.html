@@ -33,20 +33,23 @@
   <body>
     <topbar>
       <div class="d-flex justify-content-between">
-        <div
-          class="contact-info d-flex align-items-center"
-          style="margin-left: 40px"
-        >
+        <div class="contact-info d-flex align-items-center ms-1">
           <ion-icon name="logo-whatsapp"></ion-icon>
-          <span class="me-2" style="font-size: 8pt">+62 813 1231 7458</span>
+          <a class="putih" href="https://wa.me/+6281312317458" target="_blank"
+            ><span class="me-2">+62 813 1231 7458</span></a
+          >
           <ion-icon name="logo-whatsapp"></ion-icon>
-          <span style="font-size: 8pt"> +62 851 0020 8833</span>
+          <a class="putih" href="https://wa.me/+6285100208833" target="_blank"
+            ><span class="nomor"> +62 851 0020 8833</span></a
+          >
         </div>
         <div class="d-flex flex-wrap">
           <div class="d-flex align-items-center">
             <ion-icon name="logo-instagram"></ion-icon>
-            <span style="font-size: 8pt; margin-right: 40px"
-              >@viktoriagungtravel</span
+            <a class="putih"
+              href="https://www.instagram.com/viktoriagungtravel/"
+              target="_blank"
+              ><span class="me-1">@viktoriagungtravel</span></a
             >
           </div>
         </div>
@@ -54,13 +57,20 @@
     </topbar>
     <header>
       <div class="d flex align-items-center">
-        <img src="images/logo1.png" alt="logo" style="height: 30px" />
-        <ul>
-          <li><link a href="index.html" />Beranda</li>
-          <li>Tentang</li>
-          <li>Kontak</li>
-          <li>Galeri</li>
+        <a href="index.html"
+          ><img src="images/logo1.png" alt="logo" style="height: 30px"
+        /></a>
+        <ul class="nav-header">
+          <li><a href="index.html">Beranda</li></a>
+          <li><a href="#">Tentang</li></a>
+          <li><a href="#">Kontak</li></a>
+          <li><a href="#">Galeri</li></a>
         </ul>
+        <ion-icon
+          class="list-menu"
+          name="list-outline"
+          style="color: white; float: right; font-size: 30px; margin-top: 5px"
+        ></ion-icon>
       </div>
     </header>
     <div class="garis"></div>
@@ -73,7 +83,7 @@
       <h2 class="jdl-bg">
         SEWA HIACE <br />DALAM DAN LUAR <br />KOTA BANDUNG<br />
         <p style="font-size: 10px">Nyaman, Sopir Ramah dan Harga Terjangkau</p>
-        <button class="btn-bg">Kontak Kami</button>
+        <button class="btn-bg"><a href=".footer">Hubungi Kami</button></a>
       </h2>
     </div>
     <div class="garis"></div>
@@ -97,10 +107,10 @@
           <div class="text-center overflow-auto">
             <p><strong>Tersedia 4/5</strong></p>
             <div
-              class="mt-3 d-flex justify-content-center"
+              class="mt-4 d-flex justify-content-center"
               style="margin: 20px"
             >
-              <button class="myButton">Pesan Sekarang</button>
+              <button class="myButton"><a href="#footer">Hubungi Kami</button></a>
             </div>
           </div>
         </div>
@@ -115,7 +125,7 @@
     >
       <div class="jdl-bg1">
         <h1><strong>Tarif</strong></h1>
-        <span style="font-weight: 700">
+        <span style="font-weight: 700; line-height: 2">
           KOTA BANDUNG MINIMAL 2 HARI Rp 3.000.000,-(DI LUAR PARKIR)<br />
           DALAM KOTA BANDUNG 12 JAM Rp 1.100.000,-(DI LUAR PARKIR)</span
         >
@@ -136,7 +146,7 @@
       <div class="jdl-bg1">
         <h1><strong>Kelebihan</strong></h1>
       </div>
-      <div class="row" id="kolom">
+      <div class="row me-0" id="kolom">
         <div class="col">
           <ul>
             <li>Kendaraan Unit Baru</li>
@@ -229,17 +239,28 @@
           class="col"
           style="color: white; font-size: 15px; text-align: center"
         >
-          <img src="/images/logo1.png" alt="footer-logo" />
+          <img class="logo-footer" src="/images/logo1.png" alt="footer-logo" />
           <p>Rental HIACE Nyaman, Driver Ramah dan<br />Harga Terjangkau</p>
-          <br />
-          <p class="mt-3"><strong>Kontak Kami : </strong></p>
+
+          <p class="mt-0 mb-0"><strong>Kontak Kami : </strong></p>
           <p>
             Jl. Tirtasari III No. 1, Sarijadi, Kec. Sukasari, Kota Bandung Prov.
             Jawa Barat
           </p>
+          <ion-icon
+            style="font-size: 25px; align-items: center"
+            name="logo-whatsapp"
+          ></ion-icon>
         </div>
-        <div class="col">
-          <ul style="list-style-type: none; color: white; text-align: center">
+        <div class="col px-2 ini">
+          <ul
+            style="
+              list-style-type: none;
+              color: white;
+              text-align: center;
+              font-weight: bold;
+            "
+          >
             <li>Beranda</li>
             <li>About</li>
             <li>Tarif</li>
@@ -256,7 +277,7 @@
         </div>
         <div class="col">
           <div class="kontakme">
-            <div class="mapouter ps-5">
+            <div class="mapouter">
               <div class="gmap_canvas">
                 <iframe
                   width="310"
@@ -272,8 +293,6 @@
                   .mapouter {
                     position: relative;
                     text-align: right;
-                    height: 318px;
-                    width: 310px;
                   }
                 </style>
                 ><style>
@@ -281,7 +300,7 @@
                     overflow: hidden;
                     background: none !important;
                     height: 250px;
-                    width: 250px;
+                    width: 100%;
                   }
                 </style>
               </div>
@@ -313,6 +332,18 @@
         autoplay: true,
         autoplayTimeout: 1000,
         autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 4,
+          },
+        },
       });
     </script>
     <script
