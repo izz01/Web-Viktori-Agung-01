@@ -5,6 +5,7 @@
 html,
 body {
   min-height: 100%;
+  background-color: #243b552f;
 }
 header {
   position: relative;
@@ -177,8 +178,18 @@ topbar .row {
 
 .myButton {
   box-shadow: inset 0px 1px 0px 0px #e65520;
-  background: linear-gradient(to bottom, #1b48cf 5%, #3258ed 100%);
-  background-color: #1b48cf;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border-radius: 3px;
   border: 1px solid #bd33bd;
   display: inline-block;
@@ -272,7 +283,19 @@ body {
 }
 .parallax-window {
   min-height: 600px;
-  background: transparent;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .hideen {
   display: none;
@@ -290,7 +313,7 @@ footer {
   min-height: 300px;
   background: transparent;
   position: relative;
-  margin-top: 90px;
+  margin-top: 10px;
   background: rgb(33, 31, 102);
   background: linear-gradient(
     174deg,
@@ -306,4 +329,73 @@ footer {
 }
 .col hr {
   border-top: 3px solid white;
+}
+
+#kolom ul li {
+  color: white;
+  list-style-type: none;
+  text-transform: capitalize;
+  font-family: inherit;
+}
+#kolom ul {
+  margin-top: 20px;
+  margin-left: 100px;
+  font-weight: bold;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #0c5494;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: rgb(255, 145, 0);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.col ul li {
+  padding-bottom: 15px;
+}
+.container .row .col p {
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 618px) {
+  header ul li {
+    display: none;
+  }
+  .container .row .col p {
+    padding-left: 0rem;
+  }
+  .col ul {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 948px) {
+  .mapouter .ps-5 {
+    padding-left: 0rem !important;
+  }
+  .kontakme {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .kontakme {
+    justify-content: center;
+    padding: 90px 90px;
+  }
 }
