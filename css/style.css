@@ -12,9 +12,8 @@ header {
   background-color: #211f66;
   padding: 10px;
   height: 60px;
-  box-shadow: 0px 2px 4px -1px rgba(255, 255, 255, 0.75) inset;
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(255, 255, 255, 0.75) inset;
-  -moz-box-shadow: 0px 2px 4px -1px rgba(255, 255, 255, 0.75) inset;
+  box-shadow: 0px 8px 6px -1px rgba(0, 0, 0, 0.33);
+  z-index: 4;
 }
 header img {
   position: relative;
@@ -26,23 +25,40 @@ header ul {
 }
 header ul li {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 14px 20px;
   color: white;
   font-size: 9pt;
 }
-a {
-  text-decoration: none !important;
-  color: inherit;
+.hitam a {
+  text-decoration: none;
+  color: black;
 }
-a:hover {
-  font-weight: bold;
-}
+
 li a {
   color: white;
+  text-decoration: none;
+  padding-bottom: 15px;
 }
-.nav-header li a {
-  color: white !important;
+li a:hover {
+  border-bottom: 2px solid white;
+  color: white;
 }
+.btn-bg a {
+  color: white;
+  text-decoration: none;
+}
+
+.myButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.myButton a:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 topbar {
   width: 40px;
   font-size: 9pt;
@@ -54,6 +70,58 @@ topbar img {
 topbar .row {
   background-color: #211f66;
   color: white;
+}
+.sidebar {
+  position: absolute;
+  background-color: tomato;
+  width: 40%;
+  height: autoS;
+  z-index: 100;
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .garis {

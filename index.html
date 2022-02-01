@@ -35,27 +35,29 @@
       <div class="d-flex justify-content-between">
         <div class="contact-info d-flex align-items-center ms-1">
           <ion-icon name="logo-whatsapp"></ion-icon>
-          <a class="putih" href="https://wa.me/+6281312317458" target="_blank"
+          <div class="hitam">
+            <a href="https://wa.me/+6281312317458" target="_blank"
             ><span class="me-2">+62 813 1231 7458</span></a
-          >
+          ></div>
           <ion-icon name="logo-whatsapp"></ion-icon>
-          <a class="putih" href="https://wa.me/+6285100208833" target="_blank"
+          <div class="hitam">
+          <a href="https://wa.me/+6285100208833" target="_blank"
             ><span class="nomor"> +62 851 0020 8833</span></a
-          >
+          ></div>
         </div>
         <div class="d-flex flex-wrap">
           <div class="d-flex align-items-center">
             <ion-icon name="logo-instagram"></ion-icon>
-            <a class="putih"
+            <div class="hitam"><a
               href="https://www.instagram.com/viktoriagungtravel/"
               target="_blank"
               ><span class="me-1">@viktoriagungtravel</span></a
-            >
+            ></div>
           </div>
         </div>
       </div>
     </topbar>
-    <header>
+    <header id="navbar">
       <div class="d flex align-items-center">
         <a href="index.html"
           ><img src="images/logo1.png" alt="logo" style="height: 30px"
@@ -66,13 +68,23 @@
           <li><a href="#">Kontak</li></a>
           <li><a href="#">Galeri</li></a>
         </ul>
+        <a href="#"></a>
         <ion-icon
           class="list-menu"
-          name="list-outline"
-          style="color: white; float: right; font-size: 30px; margin-top: 5px"
-        ></ion-icon>
+          name="menu-outline"
+          style="color: white; float: right; font-size: 30px; margin-top: 5px" 
+          onclick="openNav()">&#9776;
+></ion-icon>
+        
       </div>
     </header>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
     <div class="garis"></div>
     <div
       class="parallax-window"
@@ -83,7 +95,7 @@
       <h2 class="jdl-bg">
         SEWA HIACE <br />DALAM DAN LUAR <br />KOTA BANDUNG<br />
         <p style="font-size: 10px">Nyaman, Sopir Ramah dan Harga Terjangkau</p>
-        <button class="btn-bg"><a href=".footer">Hubungi Kami</button></a>
+        <a href="#footer"><button class="btn-bg">Hubungi Kami</button></a>
       </h2>
     </div>
     <div class="garis"></div>
@@ -212,7 +224,7 @@
     </section> -->
     <!-- <footer class="shadow p-3 mb-5 rounded"> -->
     <div
-      class="container"
+      class="container" id="footer"
       style="
         margin-top: 20px;
         height: auto;
@@ -247,10 +259,10 @@
             Jl. Tirtasari III No. 1, Sarijadi, Kec. Sukasari, Kota Bandung Prov.
             Jawa Barat
           </p>
-          <ion-icon
+          <a href="https://wa.me/+6285100208833" target="_blank"><ion-icon 
             style="font-size: 25px; align-items: center"
             name="logo-whatsapp"
-          ></ion-icon>
+          ></ion-icon></a>
         </div>
         <div class="col px-2 ini">
           <ul
@@ -268,11 +280,11 @@
           </ul>
           <p style="color: white; text-align: center">
             <strong class="mt-1">Follow Us :</strong>
-            <br /><ion-icon
+            <br /><a href="https://www.instagram.com/viktoriagungtravel/" target="_blank"><ion-icon
               name="logo-instagram"
               style="font-size: 25px; align-items: center"
               class="mt-2"
-            ></ion-icon>
+            ></ion-icon></a>
           </p>
         </div>
         <div class="col">
@@ -322,9 +334,33 @@
       </div>
     </div>
     <!-- </footer> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
     <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";}
+    </script>
+    <script>
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+  
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.js"></script>  
+    <script>
+      
       $(".owl-carousel").owlCarousel({
         items: 4,
         loop: true,
