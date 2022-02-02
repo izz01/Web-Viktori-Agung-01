@@ -7,7 +7,7 @@ body {
   min-height: 100%;
   background-color: #243b552f;
 }
-header {
+nav {
   position: relative;
   background-color: #211f66;
   padding: 10px;
@@ -15,15 +15,15 @@ header {
   box-shadow: 0px 8px 6px -1px rgba(0, 0, 0, 0.33);
   z-index: 4;
 }
-header img {
+nav img {
   position: relative;
   margin: 8px 0 0 20px;
 }
-header ul {
+nav ul {
   float: right;
   margin-right: 20px;
 }
-header ul li {
+nav ul li {
   display: inline-block;
   padding: 14px 20px;
   color: white;
@@ -71,6 +71,7 @@ topbar .row {
   background-color: #211f66;
   color: white;
 }
+
 .sidebar {
   position: absolute;
   background-color: tomato;
@@ -364,7 +365,7 @@ body {
   margin: auto;
   max-height: 300px;
 }
-.parallax-window {
+#prlx-jdl {
   min-height: 600px;
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -380,6 +381,7 @@ body {
     #0f0c29
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .hideen {
   display: none;
 }
@@ -459,7 +461,7 @@ h1::after {
 }
 
 @media screen and (max-width: 618px) {
-  header ul {
+  nav ul {
     display: none;
   }
   .container .row .col p {
@@ -488,7 +490,7 @@ h1::after {
   .container .row .col {
     margin-top: 30px;
   }
-  .parallax-window img {
+  #prlx-jdl {
     width: 500px;
   }
   .jdl-bg {
